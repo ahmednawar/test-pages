@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			window.onload = function() {
+				var a = "open?link_click_id=324253832688951108";
+				var b = "branchsters://";
+
+				var fallbackFunction = function() {
+					if (document.webkitHidden || document.hidden) { return; }
+					//window.location.replace("market://details?id=io.branch.branchster&_branch_match_id=324253832688951108&referrer=link_click_id-324253832688951108");
+          window.location.replace("https://play.google.com/store/apps/details?id=io.branch.branchster");
+				};
+				var addIFrame = function() {
+					var iframe = document.createElement("iframe");
+					iframe.style.border = "none";
+					iframe.style.width = "1px";
+					iframe.style.height = "1px";
+					iframe.src = b + a;
+					document.body.appendChild(iframe);
+				};
+				if (navigator.userAgent.match(/Firefox/)) {
+					window.location.replace(b + a);
+				}
+				else if ((navigator.userAgent.match(/Chrome/) && navigator.userAgent.match("Version/")) || navigator.userAgent.match("\\[FB")) {
+					var setURIFunction = function() {
+						addIFrame();
+						setTimeout(fallbackFunction, 750-250);
+					};
+					setTimeout(setURIFunction, 250);
+					return;
+				}
+				else {
+					addIFrame();
+				}
+				setTimeout(fallbackFunction, 750);
+			};
+
+			
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
