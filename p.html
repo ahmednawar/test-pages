@@ -2,59 +2,10 @@
 <html>
     <head>
         <script type="text/javascript">
-// (function(root) {
-// 	var THRESHOLD = 5 * 1000;
-// 	var last_called = null;
-
-// 	var cta = function() {
-// 		var now = +new Date();
-// 		if ((last_called !== null) && (now - last_called < THRESHOLD)) {
-// 			return;
-// 		}
-// 		last_called = now;
-
-
-// 		alert('LAME');
-
-// 		// intent_redirect
-// 		window.location.replace("intent://event/98765?link_click_id=371396721569122446#Intent;scheme=pinterest;package=com.pinterest;S.market_referrer=link_click_id-371396721569122446&params%3D98765%26%24deeplink_path%3Devent%2F98765%26passive_load%3Dtrue%26js_embed%3Dtrue;end");
-
-
-// 	};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 	// pinterest_cta_set
-// 	root.__branchRedirectToStore = cta;
-
-
-
-
-// })(window);
-// window.onLoad = function(){
-// 	alert('a');
-// };
-(function(root) {
-	var cta = function() {
-		window.location.replace("intent://event/98765?link_click_id=371396721569122446#Intent;scheme=pinterest;package=com.pinterest;end");
-	};
- 	root.__branchRedirectToStore = cta;
-})(window);
 window.onload = function(){ 
-	window.setTimeout(window.__branchRedirectToStore, 500);
-
+	window.location = "http://192.168.2.166:3000/";
 }
+
 
         </script>
     </head>
