@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Web SDK Deepview</title>
+  <style type="text/css" media="screen">
+    * { margin: 0; padding: 0; box-sizing: border-box; color: #212121; text-align: center; border: none;}
+    body { background-color: #fafafa; border-top: 0.5em solid #212121; }
+    a { text-decoration: none; color: #03a9f4; }
+    img {max-width: 90%}
+    button {padding: 1em; margin: 0.5em; width: 90%; max-width: 25em; background-color: #212121; color: #ffffff; font-size: 1em;}
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+    (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="beta-websdk.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
+
+    branch.init('key_live_ccAmApSLfgIz96PkRr185dnjxCmQozXA'); // --> Ahmed Beta Test
+    // branch.init('key_live_oeCn7w7yec3d2fKSWzDUKaceFynfXGUI'); // EO Test App
+  </script>
+</head>
+
+
+
+<body>
+  <p> Branch Key being used: key_live_ccAmApSLfgIz96PkRr185dnjxCmQozXA (Ahmed Beta Test)</p>
+  <br/><br/>
+  Web SDK Deepview
+  <br/> <br/>
+  <a href="#" onclick='branch.deepviewCta();'> I Am the CTA! </a> 
+  <br/> <br/>
+  <br/> <br/>
+  <br/> <br/>
+  <a href="https://kiih-ahmed.branchbeta.link/"> Enable Me</a> 
+<br/> <br/>
+  <br/> <br/>
+  <br/> <br/>
+  <a href = "#" onclick='sendMyLinkAsSMS();'> Send Me to your Phone! </a>
+</body>
+<script type="text/javascript">
+  branch.deepview(
+  {
+    }
+  },
+  {
+      'open_app': true // If true, Branch attempts to open your app immediately when the page loads. If false, users will need to press a button. Defaults to true
+  });
+
+function sendMyLinkAsSMS() {
+  branch.sendSMS(
+    '6692648210',
+    {},
+    {},
+    null
+    );
+}
+</script>
+</html>
