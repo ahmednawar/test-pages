@@ -901,7 +901,7 @@ goog.json.Serializer.prototype.serializeObject_ = function(a, b) {
   b.push("}");
 };
 // Input 2
-var config = {app_service_endpoint:"https://ahmed.link.beta.branch.io", link_service_endpoint:"https://ahmed.link.beta.branch.io", api_endpoint:"https://ahmed.api.beta.branch.io", version:"2.18.0"};
+var config = {app_service_endpoint:"https://kiih-ahmed.branchbeta.link", link_service_endpoint:"https://ahmed.link.beta.branch.io", api_endpoint:"https://ahmed.api.beta.branch.io", version:"2.18.0"};
 // Input 3
 var safejson = {parse:function(a) {
   a = String(a);
