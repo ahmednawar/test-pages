@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" />
+
+
+ 	<script type="text/javascript">
+      (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent".split(" "), 0);
+
+    var branchLink;
+
+ 	function mainCtaClickHandler() {
+ 		window.location.assign(branchLink);
+ 	}
+
+    branch.init('key_live_acoLMx3FlYwpho29ntf7vjnkEwjEoClF', {'no_journeys': true}, function(err, data) {
+      branch.link({
+         channel: 'Passive Deepview Fallback',
+         tags: ['Main Fallback CTA'],
+         data: {
+                 "branchReferringLinkData": data
+            }
+         }, function(err, link) {
+               console.log(link);
+             branchLink = link;
+         });
+
+    });
+	</script>
+
+
+  	<style>
+		body {
+			margin: 0;
+			word-wrap: break-word;
+		}
+		/* ============ Portrait ============ */
+		.main-image {
+          	margin-top: 20%;
+			background-image: url(https://cdn.branch.io/branch-assets/1504807798255-og_image.png);
+			background-size: cover;
+			background-position:top center;
+		}
+
+		.input-wrapper {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width:100%;
+			height:110px;
+			background-color: white;
+			-webkit-box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+			-moz-box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+			box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+		}
+		.input-container {
+			width:100%;
+			padding:0 24px;
+			text-align:center;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.input-label {
+			padding-bottom: 4px;
+			font-size: 13px;
+			padding-left: 10px;
+			padding-right: 10px;
+			overflow: hidden;
+			word-wrap: break-word;
+			padding-top: 5%;
+			text-align: center;
+		}
+
+		.app-cta {
+			display:block;
+			height: 52px;
+			line-height:52px;
+			background-color: #fd5c63;
+			border-radius: 4px;
+			font-size: 20px;
+          	margin-left:10%;
+            margin-right:10%;
+			color: #FFFFFF;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		@media screen /* >= iPhone 5 */
+		and (min-device-width: 321px) {
+			.input-label {
+				font-size: 14px;
+			}
+		}
+		@media only screen /* >= iPhone 6 */
+		and (min-device-width: 375px)
+		and (orientation: portrait) {
+			.main-image {
+				height:300px;
+				height: 80vw;
+			}
+			.input-wrapper {
+				height:115px;
+			}
+		}
+		@media only screen /* >= iPhone 6+ */
+		and (min-device-width: 414px)
+		and (orientation: portrait) {
+			.main-image {
+				height:390px;
+				height: 95vw;
+			}
+		}
+		/* ============ Landscape ============ */
+		@media only screen and (orientation: landscape){
+			.main-image {
+          		margin-top: 20%;
+				background-image: url(https://cdn.branch.io/branch-assets/1504807798255-og_image.png);
+				background-size: cover;
+				background-position:top center;
+			}
+			.input-wrapper {
+				right:0;
+				left:auto;
+				width:50%;
+			}
+			.input-wrapper {
+				height:108px;
+			}
+			.input-container {
+				left: 50%;
+			}
+			.app-cta {
+				height: 44px;
+				line-height: 44px;
+				padding:0 5px;
+				margin-left:50px;
+			}
+		}
+		/* Reusables */
+		.text-bold {
+    		text-align: center;
+    		font-size: 1.4em;
+    		color: #565a5c;
+    		font-family: 'Nunito Sans', Helvetica, sans-serif;
+    		padding: 10px;
+		}
+		.text-black {
+			text-align: center;
+			font-weight: 900;
+    		font-size: 2.3em;
+    		color: #565a5c;
+    		font-family: 'Nunito Sans', Helvetica, sans-serif;
+    		padding: 30px;
+		}
+		.text-light {
+    		text-align: center;
+    		font-size: 0.7em;
+    		color: #565a5c;
+    		font-family: 'Nunito Sans', Helvetica, sans-serif;
+    		padding: 10px;
+		}
+
+	</style>
+</head>
+
+<body>
+		<div class="main-image"></div>
+			<div class="text-black"> GET THE APP </div>
+			<a href="#" class="app-cta text-bold" style="color:white;" onclick="mainCtaClickHandler()">Download</a>
+      		<div class="input-label">
+              	<a href="https://www.airbnb.com/" class="web-cta text-light" style="text-decoration: none;">Or, continue to Airbnb.com on mobile web...</a>
+  			</div>
+</body>
