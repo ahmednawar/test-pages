@@ -1,1 +1,29 @@
-<a href="https://discotest.app.link/charles">Link</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+</head>
+<style>
+    body {
+        font-size: 30px;
+    }
+</style>
+<body>
+    <p><a href="https://discotest.app.link/charles">Test</a></p>
+    <p><a href="https://discotest.app.link/?q=ice+cream">https://discotest.app.link/?q=ice+cream</a></p>
+    <hr/>
+    <p>
+    <input type="text" placeholder="Type something..." id="myInput">
+    <button type="button" onclick="getInputValue();">Search!</button>
+    </p>
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value
+            var inputVal = document.getElementById("myInput").value;
+            // Displaying the value
+            //alert(inputVal);
+            window.open("https://discotest.app.link/?q=" + inputVal);
+        }
+    </script>
+</body>
+</html>
